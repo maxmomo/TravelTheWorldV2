@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-
 export const AWS_BUCKET_NAME = process.env.AWS_S3_BUCKET_NAME!;
 
 export const s3 = new S3Client({
