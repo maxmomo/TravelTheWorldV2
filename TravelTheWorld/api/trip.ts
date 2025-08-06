@@ -92,3 +92,51 @@ export const getTrip = async (tripId: number): Promise<GetTripResponse> => {
 
   return data as GetTripResponse;
 };
+
+// ============================
+// ======== JOIN TRIP =========
+// ============================
+
+export const joinTrip = async (key: string): Promise<{ message: string; trip: TripData }> => {
+  const token = await AsyncStorage.getItem('userToken');
+
+  if (!token) {
+    throw new Error('Token manquant');
+  }
+
+  const response = await fetch(`${API_URL}/api/trips/join`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`,
+    },
+    body: JSON.stringify({ key }),
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Erreur lors de la tentative de rejoindre le voyage.');
+  }
+
+  return data as { message: string; trip: TripData };
+};
+
+export const getTripMembers = async (tripId: number) => {
+  const token = await AsyncStorage.getItem('userToken');
+  if (!token) throw new Error('Token manquant');
+
+  const response = await fetch(`${API_URL}/api/trips/${tripId}/members`, {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+    },
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Erreur lors de la récupération des membres.');
+  }
+
+  return data.members;
+};

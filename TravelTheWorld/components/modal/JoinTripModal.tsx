@@ -28,7 +28,7 @@ const JoinTripModal = ({ visible, onClose, onSubmit }: Props) => {
     }
     onSubmit(code.trim());
     setCode('');
-    onClose();
+
   };
 
   return (
@@ -50,7 +50,7 @@ const JoinTripModal = ({ visible, onClose, onSubmit }: Props) => {
             value={code}
             onChangeText={setCode}
             autoCapitalize="characters"
-            maxLength={8}
+            maxLength={6}
             style={styles.input}
           />
 

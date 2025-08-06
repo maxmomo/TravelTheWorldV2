@@ -8,7 +8,8 @@ export const TripModel = (sequelize: Sequelize) => {
       primaryKey: true
     },
     title: {
-      type: DataTypes.STRING, allowNull: false
+      type: DataTypes.STRING, 
+      allowNull: false
     },
     startDate: {
       type: DataTypes.DATE,
@@ -26,9 +27,8 @@ export const TripModel = (sequelize: Sequelize) => {
       type: DataTypes.INTEGER.UNSIGNED,
       defaultValue: 0
     },
-    countries: {
-      type: DataTypes.JSON,
-      allowNull: true
+    key: {
+      type: DataTypes.STRING
     },
   }, {
     tableName: 'trips',

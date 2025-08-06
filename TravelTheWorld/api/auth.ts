@@ -30,6 +30,8 @@ export const registerUser = async (payload: LoginPayload, t: (key: string) => st
 // ============================
 
 export const loginUser = async (payload: LoginPayload, t: (key: string) => string): Promise<LoginResponse> => {
+  
+  console.log(`${API_URL}/api/auth/login`)
   const response = await fetch(`${API_URL}/api/auth/login`, {
     method: 'POST',
     headers: {

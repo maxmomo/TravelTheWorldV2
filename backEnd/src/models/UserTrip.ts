@@ -15,6 +15,10 @@ export const UserTripModel = (sequelize: Sequelize) => {
       type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false
     },
+    role: {
+      type: DataTypes.STRING,
+      defaultValue: 'invite'
+    }
   }, {
     tableName: 'user_trips',
     timestamps: false,

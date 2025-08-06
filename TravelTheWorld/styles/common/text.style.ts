@@ -28,5 +28,11 @@ export const textStyles = StyleSheet.create({
         fontSize: METRICS.font.error,
         color: COLORS.error,
         textAlign: 'center'
-    }
+    },
+    paragraph: {
+        textAlign: 'center',
+        fontSize: METRICS.font.medium,
+        color: COLORS.black3,
+        marginTop: 8,
+    },
 });

@@ -95,7 +95,7 @@ const LoginScreen = () => {
 
       <PrimaryButton title={loading ? t('global.loading') : t('login.loginButton')} onPress={handleLogin} disabled={loading} />
 
-      <Link title={t('login.signupLink')} onPress={() => router.push('/auth/signin')} />
+      <Link title={t('login.signupLink')} onPress={() => router.push('/auth/signup')} />
 
     </AuthWrapper>
   );

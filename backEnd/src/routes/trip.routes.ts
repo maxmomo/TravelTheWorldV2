@@ -1,5 +1,5 @@
 import express from 'express';
-import { createTrip, getTrip, getUserTrips } from '../controllers/trip.controller';
+import { createTrip, getTrip, getTripMembers, getUserTrips, joinTrip } from '../controllers/trip.controller';
 import { authenticateUser } from '../middleware/authMiddleware';
 import { createPlanning, getTripPlannings } from '../controllers/planning.controller';
 
@@ -23,5 +23,10 @@ router.post('/:tripId/planning', authenticateUser, createPlanning);
 
 // Récupération des plannings du voyage (protégé)
 router.get('/:tripId/planning', authenticateUser, getTripPlannings);
+
+// Rejoindre un voyage avec une clé (protégé)
+router.post('/join', authenticateUser, joinTrip);
+
+router.get('/:id/members', authenticateUser, getTripMembers);
 
 export default router;

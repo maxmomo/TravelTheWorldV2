@@ -16,11 +16,10 @@ export type TripData = {
     title: string;              // Nom du voyage (ex: "Road trip Patagonie")
     startDate: Date | null;     // Date de début
     endDate: Date | null;       // Date de fin
-    countries: string[];        // Liste des pays visités
     budget: string;             // Budget estimatif
-    currency: string;           // Devise utilisée
     adults: number;             // Nombre d'adultes
     children: number;           // Nombre d'enfants
+    key: number;                // Clé du voyage
 };
 
 /* ==================================================

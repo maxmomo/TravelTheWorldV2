@@ -26,4 +26,11 @@ export const globalStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    emptyContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: METRICS.padding,
+        paddingBottom: METRICS.padding * 4,
+    },
 });

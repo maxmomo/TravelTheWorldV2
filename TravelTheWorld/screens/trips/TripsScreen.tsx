@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, FlatList, ActivityIndicator, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -9,7 +9,7 @@ import PrimaryButton from '@/components/common/PrimaryButton';
 import TripCard from '@/components/trip/TripCard';
 
 {/* === API === */ }
-import { getTrips } from '@/api/trip';
+import { getTrips, joinTrip } from '@/api/trip';
 
 {/* === TYPES === */ }
 import { GetTripsResponse, TripData } from '@/types/trip.types';
@@ -66,9 +66,16 @@ const TripsScreen = () => {
     setJoinModalVisible(true);
   };
 
-  const handleSubmitCode = (code: string) => {
-    console.log('Code saisi :', code);
-    // TODO: Appeler une API pour rejoindre le trip avec ce code
+  const handleSubmitCode = async (code: string) => {
+    try {
+      const result = await joinTrip(code);
+      Alert.alert('Succès', result.message);
+      setJoinModalVisible(false);
+      await fetchTrips();
+    } catch (error: any) {
+      console.error('❌ Erreur lors de la jointure :', error);
+      Alert.alert('Erreur', error.message || 'Une erreur est survenue.');
+    }
   };
 
   // Rechargement à chaque focus de l'écran
@@ -117,7 +124,10 @@ const TripsScreen = () => {
         ) : error ? (
           <Text style={textStyles.error}>{error}</Text>
         ) : trips.length === 0 ? (
-          <Text style={textStyles.title}>{t('trips.noTrips')}</Text>
+          <View style={globalStyles.emptyContainer}>
+            <Text style={textStyles.title}>🌍 Aucun voyage pour le moment</Text>
+            <Text style={textStyles.paragraph}>Crée ton premier voyage ou rejoins celui d’un ami !</Text>
+          </View>
         ) : (
           <FlatList
             data={trips}
