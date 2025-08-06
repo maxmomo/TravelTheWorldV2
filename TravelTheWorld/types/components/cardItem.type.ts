@@ -1,0 +1,1 @@
+export type BadgeIconType = 'hotel' | 'flight' | 'event';

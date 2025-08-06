@@ -1,0 +1,104 @@
+{
+    "global": {
+        "loading": "Loading ...",
+        "success": "Success",
+        "ok": "OK",
+        "return": "Return",
+        "continue": "Continue",
+        "create": "Create",
+        "plan": "Plan"
+    },
+    "tabs": {
+        "days": "Days",
+        "map": "Map",
+        "settings": "Settings"
+    },
+    "login": {
+        "title": "Welcome",
+        "subtitle": "Log in to continue",
+        "emailPlaceholder": "Email address",
+        "passwordPlaceholder": "Password",
+        "loginButton": "Log in",
+        "signupLink": "No account yet? Sign up"
+    },
+    "signin": {
+        "title": "Create an account",
+        "subtitle": "Join us now",
+        "usernamePlaceholder": "Username",
+        "emailPlaceholder": "Email address",
+        "passwordPlaceholder": "Password",
+        "signinButton": "Sign up",
+        "connectLink": "Already have an account? Log in"
+    },
+    "trips": {
+        "tripsPageTitle": "My trips",
+        "profilePageTitle": "My profile",
+        "noTrips": "You don't have any trips yet ✈️",
+        "createButton": "Create a trip",
+        "tripCreated": "Your trip has been successfully created",
+        "step": "Step",
+        "step1SubTitle": "Name your trip and select the departure and return dates",
+        "step2SubTitle": "Select the countries you plan to visit during this trip",
+        "step3SubTitle": "Enter your estimated budget and the currency",
+        "step4SubTitle": "Specify how many people will join this trip",
+        "tripNameInput": "📝 Name of the trip",
+        "tripNamePlaceHolder": "e.g. Road trip in Patagonia",
+        "tripStartDateInput": "📅 Departure date",
+        "tripEndDateInput": "📅 Return date",
+        "tripBudgetInput": "💰 Estimated budget per person",
+        "tripBudgetPlaceHolder": "e.g. 1500"
+    },
+    "plannings": {
+
+    },
+    "components": {
+        "dateInput": {
+            "placeHolder": "Select a date"
+        },
+        "countrySelector": {
+            "label": "🌍 Visited countries",
+            "addCountry": "Add a country",
+            "chooseCountry": "Choose a country",
+            "searchCountry": "Search a country..."
+        },
+        "currencySelector": {
+            "label": "💱 Currency",
+            "addCurrency": "Add a currency",
+            "chooseCurrency": "Choose a currency",
+            "searchCurrency": "Search for a currency..."
+        },
+        "peopleCounter": {
+            "adults": "👨‍🦱 Adults",
+            "children": "🧒 Children"
+        }
+    },
+    "error": {
+        "global": {
+            "unknown": "Unknown error.",
+            "error": "Error"
+        },
+        "email": {
+            "invalid": "Invalid email address."
+        },
+        "date": {
+            "invalid": "Invalid date.",
+            "startUpEnd": "The return date cannot be earlier than the departure date.",
+            "checkStartEnd": "Please check the departure and return dates."
+        },
+        "trip": {
+            "nameRequire": "Trip name required.",
+            "fillName": "Please enter a name for your trip."
+        },
+        "login": {
+            "emptyFields": "Please enter your email and password.",
+            "connexionError": "Error during login."
+        },
+        "signin": {
+            "emptyFields": "Please enter your username, email, and password.",
+            "registerError": "Error during registration."
+        },
+        "trips": {
+            "creationError": "Error while creating the trip."
+        }
+    }
+}

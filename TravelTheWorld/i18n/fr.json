@@ -1,0 +1,122 @@
+{
+    "global" : {
+        "loading": "Chargement ...",
+        "success": "Succès",
+        "ok": "OK",
+        "return": "Retour",
+        "continue": "Continuer",
+        "create": "Créer",
+        "plan": "Planifier"
+    },
+    "tabs": {
+        "days": "Journées",
+        "map": "Carte",
+        "settings": "Paramètres",
+        "budget": "Budget"
+    },
+    "login": {
+        "title": "Bienvenue",
+        "subtitle": "Connecte-toi pour continuer",
+        "emailPlaceholder": "Adresse email",
+        "passwordPlaceholder": "Mot de passe",
+        "loginButton": "Se connecter",
+        "signupLink": "Pas encore de compte ? S’inscrire"
+    },
+    "signin": {
+        "title": "Créer un compte",
+        "subtitle": "Rejoins-nous dès maintenant",
+        "usernamePlaceholder": "Nom d'utilisateur",
+        "emailPlaceholder": "Adresse email",
+        "passwordPlaceholder": "Mot de passe",
+        "signinButton": "S'inscrire",
+        "connectLink": "Déjà un compte ? Se connecter"
+    },
+    "trips": {
+        "tripsPageTitle": "Mes voyages",
+        "profilePageTitle": "Mon profil",
+        "noTrips": "Tu n'as pas encore de voyage ✈️",
+        "createButton": "Créer",
+        "joinButton": "Rejoindre",
+        "tripCreated": "Votre voyage a été créé avec succès",
+        "step": "Etape",
+        "step1SubTitle": "Donne un nom à ton voyage et choisis les dates de départ et de retour",
+        "step2SubTitle": "Sélectionne les pays que tu comptes visiter pendant ce voyage",
+        "step3SubTitle": "Donne une estimation de ton budget et la devise",
+        "step4SubTitle": "Indique combien de personnes participeront à ce voyage",
+        "tripNameInput": "📝 Nom du voyage",
+        "tripNamePlaceHolder": "Ex : Road trip en Patagonie",
+        "tripStartDateInput": "📅 Date de départ",
+        "tripEndDateInput": "📅 Date de retour",
+        "tripBudgetInput": "💰 Budget estimé par personne",
+        "tripBudgetPlaceHolder": "Ex : 1500"
+    },
+    "plannings": {
+        "step": "Etape",
+        "step1SubTitle": "Quel type de planification veux-tu ajouter ?",
+        "step2SubTitle": "Ou se situe ton hébergement ? Et à quelles dates ?",
+        "step3SubTitle": "Recherche ton hébergement sur Booking, Airbnb, ou renseigne directement le lien de ta réservation",
+        "planningLocationInput": "📍 Lieu de l'hébergement",
+        "planningLocationPlaceHolder": "Ex : Ushuaïa, AR",
+        "planningStartDateInput": "📅 Date d'arrivée",
+        "planningEndDateInput": "📅 Date de départ",
+        "planningLinkInput": "🔗 Lien de réservation",
+        "planningLinkPlaceHolder": "https://www.booking.com/..."
+    },
+    "components": {
+        "dateInput": {
+            "placeHolder": "Sélectionner une date"
+        },
+        "countrySelector": {
+            "label": "🌍 Pays visités",
+            "addCountry": "Ajouter un pays" ,
+            "chooseCountry": "Choisis un pays",
+            "searchCountry": "Rechercher un pays..."
+        },
+        "currencySelector": {
+            "label": "💱 Devise",
+            "addCurrency": "Ajouter une devise" ,
+            "chooseCurrency": "Choisis une devise",
+            "searchCurrency": "Rechercher une devise..."
+        },
+        "peopleCounter": {
+           "adults": "👨‍🦱 Adultes",
+           "children": "🧒 Enfants"
+        }
+    },
+    "error" : {
+        "global" : {
+            "unknown" : "Erreur inconnue",
+            "error": "Erreur"
+        },
+        "email" : {
+            "invalid": "Adresse email invalide."
+        },
+        "date" : {
+            "invalid": "Date invalide.",
+            "startUpEnd": "La date de retour ne peut pas être antérieure à la date de départ.",
+            "startUpEnd2": "La date de départ ne peut pas être antérieure à la date d'arrivée'.",
+            "checkStartEnd": "Merci de vérifier les dates de départ et de retour.",
+            "checkStartEnd2": "Merci de vérifier les dates de d'arrivée et de retour."
+        },
+        "trip": {
+            "nameRequire": "Nom du voyage requis",
+            "fillName": "Merci de saisir un nom pour ton voyage."
+        },
+        "login" : {
+            "emptyFields": "Veuillez entrer votre email et mot de passe.",
+            "connexionError": "Erreur lors de la connexion."
+        },
+        "signin" : {
+            "emptyFields": "Veuillez entrer votre nom d'utiisateur, email et mot de passe.",
+            "registerError": "Erreur lors de l’inscription."
+        },
+        "trips" : {
+            "creationError": "Erreur lors de la création du voyage.",
+            "loadingError": "Merci de saisir lieu pour l'hébergements"
+        },
+        "location" : {
+            "locationRequire": "Lieu d'hébergement requis",
+            "fillLocation": "Merci de saisir lieu pour l'hébergement."
+        }
+    }
+}
