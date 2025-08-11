@@ -38,6 +38,9 @@ const LoginScreen = () => {
   // === Traduction ===
   const { t } = useTranslation();
 
+  const { user } = useAuth();
+  console.log('user dans login:', user);
+
   // === Navigation ===
   const router = useRouter();
 
